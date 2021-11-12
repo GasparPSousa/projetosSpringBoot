@@ -37,10 +37,12 @@ public class OdontoService {
     }
 
     public Map<Integer, Paciente> buscarPaciente() {
+
         return mapa;
     }
 
     public void deletar(Integer id) {
+
         mapa.remove(id);
     }
 }
