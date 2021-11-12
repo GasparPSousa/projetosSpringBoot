@@ -1,0 +1,42 @@
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <title>Index Page</title>
+</head>
+<body>
+<form action="save" method="post">
+    <table>
+        <tr>
+            <td><label>Nome</label></td>
+            <td><input type="text" name="nome"></td>
+        </tr>
+        <tr>
+            <td><label>Sobrenome</label></td>
+            <td><input type="text" name="sobrenome"></td>
+        </tr>
+        <tr>
+            <td><label>CPF</label></td>
+            <td><input type="text" name="cpf"></td>
+        </tr>
+        <tr>
+            <td><label>Rua</label></td>
+            <td><input type="text" name="endereco.rua"></td>
+            <td><label>Numero
+            </label></td>
+            <td><input type="text" name="endereco.numero"></td>
+        </tr>
+        <tr>
+            <td><label>Cidade</label></td>
+            <td><input type="text" name="endereco.cidade"></td>
+            <td><label>Estado</label></td>
+            <td><input type="text" name="endereco.estado"></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Submit"/></td>
+        </tr>
+
+    </table>
+</form>
+</body>
+</html>

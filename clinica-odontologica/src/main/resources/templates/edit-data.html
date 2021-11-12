@@ -1,0 +1,41 @@
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <title>Index Page</title>
+</head>
+<body>
+<form th:action="@{/editar}" th:object="${paciente}" method="post">
+    <table>
+        <tr>
+            <td><label>Nome</label></td>
+            <td><input type="text" th:field="*{nome}" ></td>
+        </tr>
+        <tr>
+            <td><label>Sobrenome</label></td>
+            <td><input type="text" th:field="*{sobrenome}"></td>
+        </tr>
+        <tr>
+            <td><label>CPF</label></td>
+            <td><input type="text" th:field="*{cpf}"></td>
+        </tr>
+        <tr>
+            <td><label>Rua</label></td>
+            <td><input type="text" th:field="*{endereco.rua}"></td>
+            <td><label>Numero</label></td>
+            <td><input type="text" th:field="*{endereco.numero}"></td>
+        </tr>
+        <tr>
+            <td><label>Cidade</label></td>
+            <td><input type="text" th:field="*{endereco.cidade}"></td>
+            <td><label>Estado</label></td>
+            <td><input type="text" th:field="*{endereco.estado}"></td>
+        </tr>
+        <input type="hidden" th:field="*{id}"/>
+        <input type="hidden" th:field="*{endereco.id}"/>
+           <tr>
+            <td></td>
+            <td><input type="submit" value="Submit"/></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <title>Index Page</title>
+</head>
+<body>
+<div th:switch="${pacientes}">
+    <h2 th:case="${#lists.isEmpty(pacientes)}">Ainda não há pacientes!</h2>
+    <div th:case="*">
+        <h2>Users</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>CPF</th>
+                <th>Endereço</th>
+                <th>Numero</th>
+                <th>Cidade</th>
+                <th>Estado</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="paciente : ${pacientes}">
+                <td th:text="${paciente.id}"></td>
+                <td th:text="${paciente.nome}"></td>
+                <td th:text="${paciente.sobrenome}"></td>
+                <td th:text="${paciente.cpf}"></td>
+                <td th:text="${paciente.endereco.rua}"></td>
+                <td th:text="${paciente.endereco.numero}"></td>
+                <td th:text="${paciente.endereco.cidade}"></td>
+                <td th:text="${paciente.endereco.estado}"></td>
+                <td><a th:href="@{/delete/{id}(id=${paciente.id})}">Excluir</a></td>
+                <td><a th:href="@{/edit/{id}(id=${paciente.id})}">Editar</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><a href="/adicionar">Adicionar um novo Paciente</a></p>
+</div>
+</body>
+</html>
