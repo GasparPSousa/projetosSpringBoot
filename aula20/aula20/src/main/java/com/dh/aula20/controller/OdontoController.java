@@ -16,7 +16,7 @@ public class OdontoController {
 
     @Autowired
     private OdontoService service;
-    private DentistaService dentistaService;
+
 
     @GetMapping("/paciente/listar")
     public Map<Integer, Paciente> listarPacientes() {
@@ -33,23 +33,6 @@ public class OdontoController {
         service.deletar(id);
         return "Paciente Deletado";
     }
-
-    @GetMapping("/dentista/listar")
-    public Map<Integer, Dentista> listarDentistas() {
-        return dentistaService.buscarDentista();
-    }
-
-    @GetMapping("/dentista/criar")
-    public Dentista criarDentista() {
-        return dentistaService.criarDentista();
-    }
-
-    @GetMapping("/dentista/deletar/{id}")
-    public String deletarDentistas(@PathVariable Integer id) {
-        dentistaService.deletar(id);
-        return "Dentista Deletado";
-    }
-
 
 
 }

@@ -1,6 +1,7 @@
 package com.dh.aula20.service;
 
 import com.dh.aula20.domain.Dentista;
+import org.springframework.stereotype.Service;
 
 
 import java.util.HashMap;
@@ -8,6 +9,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Random;
 
+@Service
 public class DentistaService {
 
     private static Map<Integer, Dentista> mapaDentista = new HashMap<>();
@@ -33,7 +35,7 @@ public class DentistaService {
         String nome = nomesDentistas[random.nextInt(upperbound)];
         String sobrenome = sobrenomesDentistas[random.nextInt(upperbound)];
         String matricula = matriculaDentista[random.nextInt(upperbound)];
-        String email = nome.toLowerCase(Locale.ROOT) + sobrenome.toLowerCase(Locale.ROOT) + "@dh.com";
+        String email = nome.toLowerCase(Locale.ROOT) + "." + sobrenome.toLowerCase(Locale.ROOT) + "@dh.com";
         Integer idDentista = mapaDentista.size() + 1;
 
         mapaDentista.put(idDentista, new Dentista(nome, sobrenome, matricula, email, (random.nextInt(upperbound)) + 18));

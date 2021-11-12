@@ -28,7 +28,7 @@ public class OdontoService {
         int upperbound = 10;
         String nome = nomes[random.nextInt(upperbound)];
         String sobrenome = sobrenomes[random.nextInt(upperbound)];
-        String email = nome.toLowerCase(Locale.ROOT) + sobrenome.toLowerCase(Locale.ROOT) + "@dh.com";
+        String email = nome.toLowerCase(Locale.ROOT) + "." + sobrenome.toLowerCase(Locale.ROOT) + "@dh.com";
         Integer id = mapa.size() + 1;
 
         mapa.put(id, new Paciente(nome, sobrenome, email, (random.nextInt(upperbound)) + 18));
