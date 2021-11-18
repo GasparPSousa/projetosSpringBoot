@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Módulo Dentistas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/update_dentista.js"></script>
+    <script type="text/javascript" src="/js/delete_dentista.js"></script>
+    <script type="text/javascript" src="/js/get_dentista.js"></script>
+    <script type="text/javascript" src="/js/post_dentista.js"></script>
+</head>
+<body>
+<div class="container mt-3">
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link" href="/add-dentista.html">Adicionar novo registro</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/dentistas.html">Todos os Dentistas</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+        </li>
+
+
+    </ul>
+
+    <hr />
+
+    <div id="div_dentista_table">
+        <h2>Dentistas cadastrados</h2>
+        <div class="row col-md-6 table-responsive">
+
+            <table id="dentistaTable" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>Matrícula</th>
+                </tr>
+                </thead>
+                <tboby>
+                </tboby>
+            </table>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6"
+                 style="display: none; background-color: #e6fffa;
+            padding: 10px; border-radius: 8px;"
+                 id="div_dentista_updating">
+
+                <form id="update_dentista_form">
+                    <div class="form-group">
+                        <label for="dentista_id">Id:</label>
+                        <input type="text" class="form-control" id="dentista_id" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="dentista_nome">Nome:</label>
+                        <input type="text" class="form-control" id="dentista_nome" placeholder="Digite o nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="dentista_sobrenome">Id:</label>
+                        <input type="text" class="form-control" id="dentista_sobrenome"  placeholder="Digite o sobrenome">
+                    </div>
+                    <div class="form-group">
+                        <label for="dentista_matricula">Id:</label>
+                        <input type="text" class="form-control" id="dentista_matricula"  placeholder="Digite a matrícula">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" >Enviar</button>
+
+                </form>
+
+                <div id="response" style="display: none; margin: 10px;">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

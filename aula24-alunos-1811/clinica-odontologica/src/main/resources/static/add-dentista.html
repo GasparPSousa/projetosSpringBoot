@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Módulo Dentistas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/update_dentista.js"></script>
+    <script type="text/javascript" src="/js/delete_dentista.js"></script>
+    <script type="text/javascript" src="/js/get_dentista.js"></script>
+    <script type="text/javascript" src="/js/post_dentista.js"></script>
+</head>
+<body>
+<div class="container mt-3">
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link" href="/dentistas.html">Todos os Dentistas</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+        </li>
+
+    </ul>
+
+    <div class="row">
+        <div class="col-sm-8"
+             style="background-color: gray; padding: 10px; border-radius:8px">
+            <h3>Adicionar Dentista</h3>
+            <form id="add_new_dentista">
+                <div class="form-group">
+                    <label class="control-label" for="nome">Nome:</label>
+                    <input type="text" class="form-control" id="nome"
+                           placeholder="Insira aqui o seu nome" name="nome" required></inpup>
+
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="sobrenome">Sobrenome:</label>
+                    <input type="text" class="form-control" id="sobrenome"
+                           placeholder="Insira aqui o seu sobrenome" name="sobrenome" required></inpup>
+
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="matricula">Matrícula:</label>
+                    <input type="text" class="form-control" id="matricula"
+                           placeholder="Insira aqui a sua matrícula" name="matricula" required></inpup>
+
+                </div>
+
+                <button type="submit" class="btn btn-danger" id="btn-add-new-dentista">Enviar</button>
+
+            </form>
+
+            <div id="response" style="display: nome; margin-top: 10px;"></div>
+        </div>
+    </div>
+
+
+
+</div>
+
+</body>
+</html>
