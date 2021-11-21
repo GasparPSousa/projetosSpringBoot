@@ -11,27 +11,31 @@ public class EnderecoService {
     private IDao<Endereco> enderecoDao;
 
     public EnderecoService(IDao<Endereco> enderecoIDao) {
+
         this.enderecoDao = enderecoIDao;
     }
 
     public Endereco salvar(Endereco endereco) {
-        enderecoDao.salvar(endereco);
-        return endereco;
+        return enderecoDao.salvar(endereco);
     }
 
     public Optional<Endereco> buscar(Integer id) {
+
         return enderecoDao.buscar(id);
     }
 
     public List<Endereco> buscarTodos() {
+
         return enderecoDao.buscarTodos();
     }
 
     public void excluir(Integer id) {
+
         enderecoDao.excluir(id);
     }
 
     public Endereco atualizar(Endereco endereco) {
+
         return enderecoDao.atualizar(endereco);
     }
 }
