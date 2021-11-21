@@ -13,6 +13,7 @@ public class DentistaService {
     private IDao<Dentista> dentistaDao;
 
     public DentistaService(IDao<Dentista> dentistaDao) {
+
         this.dentistaDao = dentistaDao;
     }
 
@@ -22,6 +23,7 @@ public class DentistaService {
     }
 
     public void excluir(Integer id) {
+
         dentistaDao.excluir(id);
     }
 
@@ -36,6 +38,7 @@ public class DentistaService {
     }
 
     public Dentista atualizar(Dentista dentista) {
+
         return dentistaDao.atualizar(dentista);
     }
 }

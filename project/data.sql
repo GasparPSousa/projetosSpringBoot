@@ -4,3 +4,12 @@ create table IF NOT EXISTS dentista(
   sobrenome varchar(64),
   matricula int
 );
+
+create table IF NOT EXISTS endereco(
+   id int auto_increment primary key,
+   rua varchar(255),
+   numero varchar (255),
+   cidade varchar (255),
+   estado varchar (255)
+);
+

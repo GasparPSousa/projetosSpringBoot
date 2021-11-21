@@ -20,6 +20,7 @@ public class DentistaDaoH2 implements IDao<Dentista> {
 
 
     public DentistaDaoH2(ConfiguracaoJDBC configuracaoJDBC) {
+
         this.configuracaoJDBC = configuracaoJDBC;
     }
 
