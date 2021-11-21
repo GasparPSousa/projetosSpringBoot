@@ -13,3 +13,12 @@ create table IF NOT EXISTS endereco(
    estado varchar (255)
 );
 
+create table IF NOT EXISTS paciente(
+  id int auto_increment primary key,
+  nome varchar(255),
+  sobrenome varchar (255),
+  cpf varchar (255),
+  data_cadastro TIMESTAMP WITHOUT TIME ZONE,
+  endereco_id int
+);
+
