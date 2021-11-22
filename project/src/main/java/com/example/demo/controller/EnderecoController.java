@@ -60,6 +60,7 @@ public class EnderecoController {
 
     @GetMapping
     public ResponseEntity<List<Endereco>> buscarTodos() {
+
         return ResponseEntity.ok(enderecoService.buscarTodos());
     }
 
