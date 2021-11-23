@@ -20,14 +20,40 @@ public class ProdutoController {
         this.produtoService = produtoService;
     }
 
+    // Criar novo produto
     @PostMapping
     public ResponseEntity<?> criarProduto(@RequestBody Produto produto) {
         produtoService.guardar(produto);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    //Listar Todos os produtos
     @GetMapping
     public ResponseEntity<List<Produto>> listarProduto() {
         return ResponseEntity.ok(produtoService.obterTodos());
     }
+
+    // Buscar produto por id
+    @GetMapping("/{id}")
+    public ResponseEntity<Produto> buscar(@PathVariable Long id) {
+        Produto produto = produtoService.buscar(id).orElse(null);
+        return ResponseEntity.ok(produto);
+    }
+
+    // Excluir produto por id
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> excluir(@PathVariable Long id) {
+        produtoService.excluir(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    // Atualizar produto
+    public ResponseEntity<?> atualizar(@RequestBody Produto produto) {
+        produtoService.atualizar(produto);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+
+
+
 }

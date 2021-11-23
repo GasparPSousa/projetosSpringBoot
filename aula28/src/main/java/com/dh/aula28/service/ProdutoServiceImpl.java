@@ -34,7 +34,7 @@ public class ProdutoServiceImpl implements IProdutoService{
     }
 
     @Override
-    public Optional<Produto>  atualizar(Produto produto) {
+    public Optional<Produto> atualizar(Produto produto) {
         produtoRepository.save(produto);
         return produtoRepository.findById(produto.getId());
     }
