@@ -27,5 +27,11 @@ public class PacoteService {
         return pacoteRepository.findByEstado(Estado.A_CAMINHO);
     }
 
+    public List<Pacote> listar() {
+        return pacoteRepository.findAll();
+    }
+
+    public List<Pacote> pacoteACaminho() {
+        return pacoteRepository.findAllByEstado(Estado.A_CAMINHO); }
 
 }

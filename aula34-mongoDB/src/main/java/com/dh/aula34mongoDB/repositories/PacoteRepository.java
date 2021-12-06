@@ -16,4 +16,7 @@ public interface PacoteRepository extends MongoRepository<Pacote, String> {
 
     @Query
     public List<Pacote> findByCodigo(String string);
+
+    @Query
+    public List<Pacote> findAllByEstado(Estado estado);
 }

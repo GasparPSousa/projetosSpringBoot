@@ -39,6 +39,16 @@ public class PacoteController {
 
     }
 
+    @GetMapping
+    public List<Pacote> listar() {
+        return pacoteService.listar();
+    }
+
+    @GetMapping("/acaminho")
+    public List<Pacote> aCaminho() {
+        return pacoteService.pacoteACaminho();
+    }
+
     @ExceptionHandler({BadRequestException.class})
     public ResponseEntity<String> processarErrorBadRequest(BadRequestException e) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
@@ -50,9 +60,10 @@ public class PacoteController {
         return pacoteService.buscarPacotes(convertEstadoParaNum);
      }
 
-    @GetMapping("/acaminho")
-    public List<Pacote> buscarPacotes() {
-        return pacoteService.buscarPacotes(Estado.A_CAMINHO);
-    }
+//    @GetMapping("/acaminho")
+//    public List<Pacote> buscarPacotes() {
+//
+//        return pacoteService.buscarPacotes(Estado.A_CAMINHO);
+//    }
 
 }
