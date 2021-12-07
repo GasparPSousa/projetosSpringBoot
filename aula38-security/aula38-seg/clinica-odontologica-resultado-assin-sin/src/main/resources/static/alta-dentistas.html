@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>CRUD dentistas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/post_dentistas.js"></script>
+</head>
+<body>
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="/dentistas.html">Administração Dentistas</a>
+            </li>
+        </ul>
+<div class="row">
+    <div class="col-sm-7" style="background-color:#e6fffa; padding:10px; border-radius:3px">
+        <h3>Adicionar dentista</h3>
+        <form id="add_new_dentista">
+            <div class="form-group">
+                <label class="control-label" for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nome"
+                       placeholder="Insira o nome" name="nome" required></input>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="sobrenome">Sobrenome:</label>
+                <input type="text" class="form-control" id="sobrenome"
+                       placeholder="Insira o sobrenome" name="sobrenome" required></input>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="matricula">Matricula:</label>
+                <input type="number" class="form-control" id="matricula"
+                       placeholder="Insira a matricula" name="matricula"></input>
+            </div>
+            
+            <button type="submit" class="btn btn-danger" id="btn-add-new-dentista">Carregar</button>
+        </form>
+        <div id="response" style="display:none; margin-top:10px">
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
