@@ -44,6 +44,6 @@ public class HelloResource {
 
     @RequestMapping({"/hello"})
     public String hello() {
-        return "Hello World";
+        return "Hello World DH Brazil";
     }
 }
