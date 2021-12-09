@@ -11,10 +11,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.concurrent.ExecutionException;
 
@@ -46,4 +43,9 @@ public class HelloResource {
     public String hello() {
         return "Hello World DH Brazil";
     }
+
+    @GetMapping({"/adeus"})
+    public String goodbye(){
+        return "Boas Férias Housers!";
+    };
 }
